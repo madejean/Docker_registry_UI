@@ -7,7 +7,7 @@ import thunkMiddleware from 'redux-thunk';
 import {createStore, applyMiddleware} from 'redux';
 import allReducers from './Reducers'
 import App from './Components/Body.js';
-import {fetchRepo} from './Actions/RepositoryActionCreator.js';
+import {repoGet} from './Actions/RepositoryActionCreator.js';
 
 const store = createStore(
   allReducers,
@@ -16,7 +16,7 @@ const store = createStore(
   )
 );
 
-store.dispatch(fetchRepo());
+store.dispatch(repoGet());
 
 ReactDOM.render(
   (
