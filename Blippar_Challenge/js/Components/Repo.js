@@ -7,13 +7,12 @@ import RepoList from '../Containers/repo_list.js';
       <h2>Repo List</h2>
       <RepoList />
       <hr/>
-    //  <h2>Repo Details</h2>
-      //<RepoDetails />
     </div>
   );
 
 export default Repo;
-
+//  <h2>Repo Details</h2>
+  //<RepoDetails />
 /*export default class Repos extends React.Component {
   constructor(props) {
     super(props);

@@ -10,7 +10,7 @@ export const SELECT_REPO = 'SELECT_REPO';
 export function requestRepo(repo) {
   return {
     type: REQUEST_REPO,
-    payload: repo,
+    payload: repo
     }
   }
 
@@ -38,7 +38,7 @@ export function requestRepo(repo) {
     }
   }
 
-  function fetchRepo(repo) {
+  export function fetchRepo(repo) {
     return dispatch => {
       dispatch(requestRepo(repo))
       return fetch(`https://docker.blippar.com/v2/_catalog?n=&last=${repo}.json`)
