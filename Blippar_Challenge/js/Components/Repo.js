@@ -1,8 +1,20 @@
 import React from 'react';
 import RepoList from '../Containers/repo_list.js';
-import RepoDetail from '../Containers/repo_details.js';
+import RepoDetails from '../Containers/repo_details.js';
 
-export default class Repos extends React.Component {
+  const Repo = () => (
+    <div>
+      <h2>Repo List</h2>
+      <RepoList />
+      <hr/>
+      <h2>Repo Details</h2>
+      <RepoDetails />
+    </div>
+  );
+
+export default Repo;
+
+/*export default class Repos extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -21,4 +33,4 @@ export default class Repos extends React.Component {
       </div>
     )
   }
-}
+}*/

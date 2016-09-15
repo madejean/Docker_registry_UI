@@ -1,24 +1,29 @@
-import { REPO_GET_REQUEST, REPO_GET_SUCCESS, REPO_GET_ERROR } from '../Actions/RepositoryActionCreator.js'
+import { REQUEST_REPO, RECEIVE_REPO, INVALIDATE_REPO, SELECT_REPO } from '../Actions/RepositoryActionCreator.js'
 
-export default function RepoReducer(state={isFetching: false, repos:[], error: null}, action){
+export default function RepoReducer(state={}, action){
   switch(action.type) {
-    case REPO_GET_REQUEST:
+    case REQUEST_REPO:
     /*update sate by creating a new object to copy props*/
       return Object.assign(
         {},
-        {isFetching: true}
+        state,
+        {
+          isFetching: true,
+          didInvalidate: false,
+        }
       );
-    case REPO_GET_SUCCESS:
+    case RECEIVE_REPO:
       return Object.assign(
         {},
         state,
         {
           isFetching: false,
-          error: false,
-          repos: action.repos,
+          didInvalidate: false,
+          items: action.payload,
+          receivedAt: Date.now()
         }
       );
-    case REPO_GET_ERROR:
+    case INVALIDATE_REPO:
       return Object.assign(
         {},
         state,
@@ -27,6 +32,8 @@ export default function RepoReducer(state={isFetching: false, repos:[], error: n
           isFetching: false,
         }
       );
+      case SELECT_REPO:
+        return action.payload
 
   default:
     return state

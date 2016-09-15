@@ -7,6 +7,7 @@ const App = props => (
 	<div>
     	<Header />
     	<SearchBar />
+      <Repo />
     	<Content />
     	<Footer />
 	</div>

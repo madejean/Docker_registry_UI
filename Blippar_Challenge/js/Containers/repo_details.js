@@ -5,7 +5,7 @@ class RepoDetails extends Component {
   render() {
     return(
       <div>
-        <h2>{this.props.repo}</h2>
+        <h2>{this.props.repo.repositories}</h2>
       </div>
     );
   }

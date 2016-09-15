@@ -15,7 +15,9 @@
   "author": "Marine Dejean",
   "license": "ISC",
   "dependencies": {
+    "es6-promise": "^3.3.1",
     "immutable": "^3.8.1",
+    "isomorphic-fetch": "^2.2.1",
     "normalizr": "^2.2.1",
     "react": "^15.3.1",
     "react-dom": "^15.3.1",
@@ -28,6 +30,7 @@
   "devDependencies": {
     "babel-core": "^6.14.0",
     "babel-loader": "^6.2.5",
+    "babel-polyfill": "^6.13.0",
     "babel-preset-es2015": "^6.14.0",
     "babel-preset-react": "^6.11.1",
     "webpack": "^1.13.2",
