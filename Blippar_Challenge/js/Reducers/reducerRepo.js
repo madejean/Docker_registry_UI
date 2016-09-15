@@ -1,6 +1,7 @@
 import { REQUEST_REPO, RECEIVE_REPO, INVALIDATE_REPO, SELECT_REPO } from '../Actions/RepositoryActionCreator.js'
 
 export default function RepoReducer(state={}, action){
+  console.log("Reducer: ", state, action);
   switch(action.type) {
     case REQUEST_REPO:
     /*update sate by creating a new object to copy props*/
@@ -33,7 +34,16 @@ export default function RepoReducer(state={}, action){
         }
       );
       case SELECT_REPO:
-        return action.payload
+        return Object.assign(
+          {},
+          state,
+          {
+            isFetching: false,
+            didInvalidate: false,
+            items: action.payload,
+            receivedAt: Date.now()
+          }
+        );//action.payload
 
   default:
     return state

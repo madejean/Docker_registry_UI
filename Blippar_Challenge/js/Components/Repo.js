@@ -1,14 +1,14 @@
 import React from 'react';
 import RepoList from '../Containers/repo_list.js';
-import RepoDetails from '../Containers/repo_details.js';
+//import RepoDetails from '../Containers/repo_details.js';
 
   const Repo = () => (
     <div>
       <h2>Repo List</h2>
       <RepoList />
       <hr/>
-      <h2>Repo Details</h2>
-      <RepoDetails />
+    //  <h2>Repo Details</h2>
+      //<RepoDetails />
     </div>
   );
 

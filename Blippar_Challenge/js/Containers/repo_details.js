@@ -5,12 +5,12 @@ class RepoDetails extends Component {
   render() {
     return(
       <div>
-        <h2>{this.props.repo.repositories}</h2>
+
       </div>
     );
   }
 }
-
+/*<h2>{this.props.repo.repositories}</h2>
 function mapStateToProps(state) {
   return {
     repositories: state.activeRepo
@@ -18,3 +18,4 @@ function mapStateToProps(state) {
 }
 
 export default connect(mapStateToProps)(RepoDetails);
+*/

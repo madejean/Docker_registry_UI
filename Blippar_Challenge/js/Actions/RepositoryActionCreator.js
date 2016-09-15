@@ -31,9 +31,9 @@ export function requestRepo(repo) {
   }
 
   export function selectRepo(repo){
-    console.log("Clicked Repo", repo.repositories);
+    console.log("Action select repo");
     return {
-      type: "SELECT_REPO",
+      type: SELECT_REPO,
       payload: repo
     }
   }
