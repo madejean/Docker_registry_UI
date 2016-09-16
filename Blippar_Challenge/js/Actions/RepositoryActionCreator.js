@@ -41,7 +41,7 @@ export function requestRepo(repo) {
   export function fetchRepo(repo) {
     return dispatch => {
       dispatch(requestRepo(repo))
-      return fetch(`https://docker.blippar.com/v2/_catalog?n=&last=${repo}.json`)
+      return fetch(`url${repo}.json`)
       .then(response => response.json())
       .then(json => dispatch(receiveRepo(repo, json))
       )
