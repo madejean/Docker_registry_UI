@@ -1,8 +1,8 @@
 import {combineReducers} from 'redux';
-import RepoReducer from './reducerRepo.js';
+import {showRepositories} from './repo_reducer.js';
 
-const allReducers = combineReducers({
-  repositories: RepoReducer
-});
+const allReducers = combineReducers ({
+  repositories: showRepositories
+})
 
 export default allReducers;
