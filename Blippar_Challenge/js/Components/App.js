@@ -1,39 +1,19 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { connect } from 'react-redux';
-import { showRepositories } from '../actions/actioncreator.js';
+import RepoList from './repoList.js';
+import TagList from './tagList.js';
+import TagDetails from './tagDetails.js'
 
-class App extends React.Component {
-  componentWillMount(){
-    this.props.showRepositories()
-  }
+const App = () => (
+    <div>
+        <h1>Repositories List</h1>
+        <hr />
+        <RepoList />
+        <hr />
+        <h2>Repository Details</h2>
+        <TagList />
+        <hr />
+        <TagDetails />
+    </div>
+);
 
-  renderRepoList() {
-    return this.props.repositories.map((repo) => {
-      return (
-        <li key={repo.id} /*onClick={() => this.props.selectRepo(repo)}*/>
-          {repo.name}
-        </li>
-      );
-    });
-  }
-
-  render() {
-    return (
-      <div>
-        <h2>Repositories List</h2>
-        <ul>
-          {this.renderRepoList()}
-        </ul>
-      </div>
-    );
-  }
-
-  }
-
-  function mapStateToProps(state){
-    return {
-      repositories: state.repositories.list
-    }
-  }
-  export default connect(mapStateToProps, {showRepositories})(App)
+export default App;
