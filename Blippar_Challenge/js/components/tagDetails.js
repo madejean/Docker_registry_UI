@@ -27,7 +27,6 @@ class TagDetails extends React.Component {
     })
     return (
       <div>
-        <h2>Details</h2>
         <ul key={details.id}>{details}</ul>
       </div>
     )

@@ -1,19 +1,24 @@
 import React from 'react';
-import RepoList from './repoList.js';
-import TagList from './tagList.js';
-import TagDetails from './tagDetails.js'
+import Header from '../containers/header.js';
+import InfoBar from '../containers/infoBar.js';
+import Body from '../containers/body.js';
 
-const App = () => (
-    <div>
-        <h1>Repositories List</h1>
+class App extends React.Component {
+  render() {
+    var styles = {
+        marginLeft: '10px',
+        padding: '0px 10px 0px 10px',
+    }
+  return (
+    <div style={styles}>
+        <Header />
+        <br />
+        <InfoBar />
         <hr />
-        <RepoList />
-        <hr />
-        <h2>Repository Details</h2>
-        <TagList />
-        <hr />
-        <TagDetails />
+        <Body />
     </div>
-);
+    )
+  }
+}
 
 export default App;

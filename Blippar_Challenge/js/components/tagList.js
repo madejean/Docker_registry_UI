@@ -38,7 +38,6 @@ class TagList extends React.Component {
     })
     return (
       <div>
-        <h3>Tag List</h3>
         <ul key={tags.id}>{tags}</ul>
       </div>
     )

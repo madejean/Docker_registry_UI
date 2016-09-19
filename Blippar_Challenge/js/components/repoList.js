@@ -26,6 +26,7 @@ class RepoList extends React.Component {
     return (
       <div>
         <input ref="query" onChange={(e) => {this.updateSearch(); }} type="text"/>
+        <button type="button">Search</button>
         <ul key={repositories.id}>{repositories}</ul>
       </div>
     )
