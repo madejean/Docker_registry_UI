@@ -2,7 +2,7 @@ import React from 'react';
 import request from 'superagent';
 import _ from 'lodash';
 
-class TagDetails extends React.Component {
+class TagVersion extends React.Component {
   constructor(){
     super();
     this.state = {};
@@ -22,9 +22,9 @@ class TagDetails extends React.Component {
         });
   }
   render() {
-    console.log("render tag details", this.state);
+    console.log("version", this.state);
     var details = _.map(this.state.details, (info, id) => {
-      return <li key={id}>{JSON.parse(info.v1Compatibility).author}</li>;
+      return <li key={id}>{JSON.parse(info.v1Compatibility).docker_version}</li>;
     })
     return (
       <div>
@@ -34,4 +34,4 @@ class TagDetails extends React.Component {
   }
 }
 
-export default TagDetails;
+export default TagVersion;

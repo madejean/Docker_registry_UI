@@ -6,36 +6,32 @@ import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import {selectTag} from '../actions/tagActions.js';
 import {selectRepo} from '../actions/repoActions.js';
-import {fetchTagInfo} from '../actions/tagInfoActions.js';
 
-class TagList extends React.Component {
+class TagInfoList extends React.Component {
   constructor() {
     super();
     this.state = {};
   }
   render() {
-  var tags = _.map(this.props.tags, (tag, id) => {
-      return <li key={id} onClick={()=>this.props.fetchTagInfo(tag)}>
-        {tag}
-      </li>;
+  var tagInfos = _.map(this.props.infos, (info, id) => {
+      return
+      <li key={id}>{JSON.parse(infos)}</li>
     })
     return (
       <div>
-        <ul key={tags.id}>{tags}</ul>
+        <ul key={tagInfos.id}>{tagInfos}</ul>
       </div>
     )
   }
 }
 function mapStateToProps(state) {
 	return {
-    repository: state.repositories.item,
-	   tags: state.tags.items
+	   infos: state.infos.items
 	};
 }
 
 function matchDispatchToProps(dispatch) {
 	return bindActionCreators({
-    fetchTagInfo
 	}, dispatch);
 }
-export default connect(mapStateToProps, matchDispatchToProps)(TagList);
+export default connect(mapStateToProps, matchDispatchToProps)(TagInfoList);
