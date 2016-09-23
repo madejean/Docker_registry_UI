@@ -27,7 +27,7 @@ export function requestTags(repo_id) {
   export function fetchTags(repo_id) {
     return function(dispatch) {
       dispatch(requestTags(repo_id));
-      request.get(`https://docker-cors.dev.blippar.com/v2/${repo_id}/tags/list`)
+      request.get(`/${repo_id}/tags/list`)
               .then((response) => {
                     console.log("tags query", response.body);
                     dispatch(receiveTags(response.body.tags), repo_id);

@@ -34,7 +34,7 @@ export function requestRepo() {
   export function fetchRepo() {
     return function(dispatch) {
       dispatch(requestRepo());
-      request.get(`https://docker-cors.dev.blippar.com/v2/_catalog?n=&last=`)
+      request.get(``)
               .then((response) => {
                     console.log("this repositories", response.body);
                     dispatch(receiveRepo(response.body.repositories));

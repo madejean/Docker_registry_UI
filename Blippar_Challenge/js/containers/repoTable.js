@@ -9,7 +9,7 @@ import Subheader from 'material-ui/Subheader';
 import Toggle from 'material-ui/Toggle';
 import RepoList from '../components/repoList.js';
 import TagList from '../components/tagList.js';
-import TagInfoList from '../components/TagInfoList.js';
+import TagInfoList from '../components/tagInfoList.js';
 import TagVersion from '../components/dockerVersion.js';
 import FilterSearch from '../components/searchBar.js';
 

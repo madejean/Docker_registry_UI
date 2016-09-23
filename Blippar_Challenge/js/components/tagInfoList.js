@@ -13,6 +13,9 @@ class TagInfoList extends React.Component {
     this.state = {};
   }
   render() {
+    if(!this.props.infos){
+      return (<div>select a tag</div>);
+    }
   var tagInfos = _.map(this.props.infos, (info, id) => {
       return
       <li key={id}>{info}</li>

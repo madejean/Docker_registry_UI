@@ -14,6 +14,9 @@ class TagList extends React.Component {
     this.state = {};
   }
   render() {
+    if(!this.props.tags){
+      return (<div>select a repository</div>);
+    }
   var tags = _.map(this.props.tags, (tag, id) => {
       return <li key={id} onClick={()=>this.props.fetchTagInfo(tag)}>
         {tag}
