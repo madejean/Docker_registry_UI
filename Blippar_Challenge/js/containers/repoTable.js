@@ -9,7 +9,7 @@ import Subheader from 'material-ui/Subheader';
 import Toggle from 'material-ui/Toggle';
 import RepoList from '../components/repoList.js';
 import TagList from '../components/tagList.js';
-import TagDetails from '../components/tagDetails.js';
+import TagInfoList from '../components/TagInfoList.js';
 import TagVersion from '../components/dockerVersion.js';
 import FilterSearch from '../components/searchBar.js';
 
@@ -60,7 +60,7 @@ export default class ListRepo extends React.Component {
                     <TableRowColumn style={{verticalAlign:'top'}}><TagList /></TableRowColumn>
                     <TableRowColumn style={{verticalAlign:'top'}}></TableRowColumn>
                     <TableRowColumn style={{verticalAlign:'top'}}></TableRowColumn>
-                    <TableRowColumn style={{verticalAlign:'top'}}><TagDetails /></TableRowColumn>
+                    <TableRowColumn style={{verticalAlign:'top'}}><TagInfoList /></TableRowColumn>
                     <TableRowColumn style={{verticalAlign:'top'}}></TableRowColumn>
                   </TableRow>
                   </tbody>

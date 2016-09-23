@@ -15,7 +15,8 @@ class TagInfoList extends React.Component {
   render() {
   var tagInfos = _.map(this.props.infos, (info, id) => {
       return
-      <li key={id}>{JSON.parse(infos)}</li>
+      <li key={id}>{info.v1Compatibility.author}</li>
+
     })
     return (
       <div>

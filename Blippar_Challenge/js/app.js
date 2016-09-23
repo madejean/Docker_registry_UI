@@ -8,6 +8,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Application from "./components/app.js";
 import {fetchRepo} from './actions/repoActions.js';
 import {fetchTags} from './actions/tagActions.js';
+import {fetchTagInfo} from './actions/tagInfoActions.js';
 import allReducers from './reducers/all_reducers.js';
 
 const store = createStore(
@@ -19,6 +20,7 @@ const store = createStore(
 
 store.dispatch(fetchRepo())
 store.dispatch(fetchTags())
+store.dispatch(fetchTagInfo())
 
 const App = () => (
  <MuiThemeProvider muiTheme={getMuiTheme()}>

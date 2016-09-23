@@ -27,10 +27,10 @@ export function requestTagInfo(tag_id) {
   export function fetchTagInfo(tag_id) {
     return function(dispatch) {
       dispatch(requestTagInfo(tag_id));
-      request.get(`${tag_id}`)
+      request.get(`https://docker-cors.dev.blippar.com/v2/${tag_id}`)
               .then((response) => {
                     console.log("tags info query", response.body);
-                    dispatch(receiveTagInfo(response.body.history), tag_id);
+                    dispatch(receiveTag(response.body.history), tag_id);
               }, (error) => {
                     console.error("Failed!", error);
           });

@@ -17,7 +17,7 @@ const initialState = {
 function TagInfoReducer(state=initialState, action){
   console.log("Reducer: ", state, action);
   switch(action.type) {
-    case REQUEST_TAGS:
+    case REQUEST_TAG_INFO:
     /*update sate by creating a new object to copy props*/
       return Object.assign(
         {},
@@ -27,14 +27,14 @@ function TagInfoReducer(state=initialState, action){
           fetch_tag: action.fetch_tag
         }
       );
-    case RECEIVE_TAGS:
+    case RECEIVE_TAG_INFO:
       return Object.assign(
         {},
         state,
         {
           isFetching: false,
           didInvalidate: false,
-          items: action.tagsInfoPayload,
+          items: action.tagInfoPayload,
         }
       );
   default:
