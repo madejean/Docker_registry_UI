@@ -9,7 +9,7 @@ class TagVersion extends React.Component {
   }
 
   componentWillMount(){
-    var url = `https://docker-cors.dev.blippar.com/v2/connect/isengard/manifests/dev`;
+    var url = ``;
     request.get(url)
             .then( (response) => {
                   console.log(response.body);
